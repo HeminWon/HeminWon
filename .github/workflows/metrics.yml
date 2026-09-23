@@ -1,0 +1,47 @@
+name: Profile calendar
+
+on:
+  schedule:
+    # Daily at 08:17 in Asia/Shanghai (00:17 UTC).
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/workflows/metrics.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-calendar
+  cancel-in-progress: false
+
+jobs:
+  calendar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check metrics token
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          if [ -z "$METRICS_TOKEN" ]; then
+            echo "::error::Add METRICS_TOKEN in Settings > Secrets and variables > Actions, then rerun this workflow."
+            exit 1
+          fi
+
+      - name: Render yearly contribution calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ github.token }}
+          user: HeminWon
+          filename: metrics.isocalendar.svg
+          base: ""
+          template: classic
+          config_timezone: Asia/Shanghai
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugins_errors_fatal: yes

@@ -1,18 +1,23 @@
-### Hi there 👋
+<sub>HEMIN WON &nbsp; / &nbsp; CODE, CRAFT & CURIOSITY</sub>
 
-<!--
-**HeminWon/HeminWon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Software, thoughtfully made.
 
-Here are some ideas to get you started:
+I'm **Hemin Won**, an iOS developer.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I build applications with care for the details — how a screen reads, how an interaction feels, and how the code holds together.
 
-Software Dev Engineer working on iOS Application Projects.
+This is a space for personal projects, small experiments, and learning by making.
+
+---
+
+### A year in code
+
+<sub>Small steps, taking shape over time.</sub>
+
+![Isometric calendar of Hemin Won's GitHub contributions over the past year](./metrics.isocalendar.svg)
+
+---
+
+[Explore my repositories ↗](https://github.com/HeminWon?tab=repositories)
+
+<sub>A work in progress, by design.</sub>
